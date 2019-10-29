@@ -78,7 +78,16 @@ public:
 
 	set<string> Find(const Date &date) const;
 
-	void Print() const;
+	void Print() const {
+		for (const auto& [date, events] : db) {
+			for (const auto &event : events) {
+				cout << date << " " << event << endl;
+			}
+		}
+	}
+
+private:
+	map<Date, set<string>> db;
 };
 
 int main() {
@@ -91,6 +100,10 @@ int main() {
 		string op;
 		if (!(ss_line >> op)) {
 			continue;
+		}
+
+		if (op == "Print") {
+			db.Print();
 		}
 
 		Date d;
@@ -116,7 +129,9 @@ int main() {
 		} else if (op == "Del") {
 			db.DeleteDate(d);
 		} else if (op == "Find") {
-			for ()
+			for (const auto &e : db.Find(d)) {
+				cout << e << endl;
+			}
 		}
 
 		return 0;
