@@ -34,6 +34,8 @@ public:
 			return input_val * val;
 		} else if (op == '/') {
 			return input_val / val;
+		} else {
+			throw runtime_error("not allowed op");
 		}
 	}
 

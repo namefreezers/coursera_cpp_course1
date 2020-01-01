@@ -25,7 +25,7 @@ public:
 			return first + " " + last;
 		} else if (first != "") {
 			return first + " with unknown last name";
-		} else if (last != "") {
+		} else { // if (last != "")
 			return last + " with unknown first name";
 		}
 	}

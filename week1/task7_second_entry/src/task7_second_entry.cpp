@@ -6,7 +6,7 @@ int main() {
 	string s;
 	cin >> s;
 	int status = -2;
-	for (int i = 0; i < s.size(); i++) {
+	for (size_t i = 0; i < s.size(); i++) {
 		if (s[i] == 'f') {
 			if (status == -2) {
 				status = -1;

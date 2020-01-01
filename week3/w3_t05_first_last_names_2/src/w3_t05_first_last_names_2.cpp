@@ -25,7 +25,7 @@ public:
 			return first + " " + last;
 		} else if (first != "") {
 			return first + " with unknown last name";
-		} else if (last != "") {
+		} else { // if (last != "")
 			return last + " with unknown first name";
 		}
 	}
@@ -39,7 +39,7 @@ public:
 			return first_hist + " " + last_hist;
 		} else if (first_hist != "") {
 			return first_hist + " with unknown last name";
-		} else if (last_hist != "") {
+		} else { // if (last_hist != "")
 			return last_hist + " with unknown first name";
 		}
 	}

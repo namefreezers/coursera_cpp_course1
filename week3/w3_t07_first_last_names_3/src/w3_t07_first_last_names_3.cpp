@@ -43,7 +43,7 @@ public:
 			return first + " " + last;
 		} else if (first != "") {
 			return first + " with unknown last name";
-		} else if (last != "") {
+		} else { // if (last != "")
 			return last + " with unknown first name";
 		}
 	}
@@ -61,7 +61,7 @@ public:
 			return first_hist + " " + last_hist;
 		} else if (first_hist != "") {
 			return first_hist + " with unknown last name";
-		} else if (last_hist != "") {
+		} else { // if (last_hist != "")
 			return last_hist + " with unknown first name";
 		}
 	}
@@ -79,13 +79,11 @@ private:
 		return name;
 	}
 
-	string get_history(const map<int, string> &names,
-			const int &searched_year) const {
+	string get_history(const map<int, string> &names, const int &searched_year) const {
 		vector<string> names_hist;
 		for (const auto& [y, n] : names) {
 			if (y <= searched_year) {
-				if (names_hist.size() == 0
-						|| names_hist[names_hist.size() - 1] != n) {
+				if (names_hist.size() == 0 || names_hist[names_hist.size() - 1] != n) {
 					names_hist.push_back(n);
 				}
 			} else {
