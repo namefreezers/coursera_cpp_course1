@@ -2,11 +2,15 @@
 #include <exception>
 #include <string>
 using namespace std;
-//
+
 //string AskTimeServer() {
 //	throw system_error(error_code());
 //	return "";
 //}
+
+string AskTimeServer() {
+	return "";
+}
 
 class TimeServer {
 public:
@@ -25,7 +29,7 @@ private:
 };
 
 //int main() {
-//    // Меняя реализацию функции AskTimeServer, убедитесь, что это код работает корректно
+//    // РњРµРЅСЏСЏ СЂРµР°Р»РёР·Р°С†РёСЋ С„СѓРЅРєС†РёРё AskTimeServer, СѓР±РµРґРёС‚РµСЃСЊ, С‡С‚Рѕ СЌС‚Рѕ РєРѕРґ СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ
 //    TimeServer ts;
 //    try {
 //        cout << ts.GetCurrentTime() << endl;
