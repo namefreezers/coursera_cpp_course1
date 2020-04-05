@@ -32,6 +32,7 @@ int main() {
 			int next = (cur_month + 1) % 12;
 			if (lengths[next] >= lengths[cur_month]) {
 				affairs.resize(lengths[next]);
+				cur_month = next;
 			} else {
 				for (int i = lengths[next]; i < lengths[cur_month]; i++) {
 					affairs[lengths[next] - 1].insert(
