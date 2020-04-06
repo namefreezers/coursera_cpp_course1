@@ -8,9 +8,9 @@ using namespace std;
 //	return "";
 //}
 
-string AskTimeServer() {
-	return "";
-}
+//string AskTimeServer() {
+//	return "";
+//}
 
 class TimeServer {
 public:
