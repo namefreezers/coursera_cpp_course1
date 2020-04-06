@@ -24,7 +24,7 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < m - 1; ++j) {
 			getline(input_f, s, ',');
-			cout << setw(w) << s;
+			cout << setw(w) << s << ' ';
 		}
 		getline(input_f, s);
 		cout << setw(w) << s;
