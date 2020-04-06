@@ -68,17 +68,17 @@ private:
 	vector<FunctionPart> parts;
 };
 
-struct Image {
-	double quality;
-	double freshness;
-	double rating;
-};
-
-struct Params {
-	double a;
-	double b;
-	double c;
-};
+//struct Image {
+//	double quality;
+//	double freshness;
+//	double rating;
+//};
+//
+//struct Params {
+//	double a;
+//	double b;
+//	double c;
+//};
 
 Function MakeWeightFunction(const Params &params, const Image &image) {
 	Function function;
