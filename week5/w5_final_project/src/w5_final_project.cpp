@@ -69,8 +69,7 @@ istream& operator>>(istream &stream, Date &d) {
 	if (!(ss >> day)) {
 		throw runtime_error("Wrong date format: " + date_str);
 	}
-	string temp;
-	if (ss >> temp) { // anything left
+	if (!ss.eof()) { // anything left
 		throw runtime_error("Wrong date format: " + date_str);
 	}
 
@@ -127,6 +126,7 @@ private:
 	map<Date, set<string>> db;
 };
 
+
 int main() {
 	Database db;
 
@@ -139,12 +139,18 @@ int main() {
 			continue;
 		}
 
+		if (!(op == "Print" || op == "Add" || op == "Del" || op == "Find")) {
+			cout << "Unknown command: " << op << endl;
+			continue;
+		}
+
 		if (op == "Print") {
 			db.Print();
+			continue;
 		}
 
 		Date d;
-		if (op == "Add" or op == "Del" or op == "Find") {
+		if (op == "Add" || op == "Del" || op == "Find") {
 			try {
 				ss_line >> d;
 			} catch (const invalid_argument &e) {
